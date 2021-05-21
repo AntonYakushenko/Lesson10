@@ -28,7 +28,7 @@ public class demoqa {
         $("[for=gender-radio-1]").click();
         $("#userNumber").setValue("9874561232");
 
-        $("#uploadPicture").uploadFile(new File("Rubiks_cube.jpg"));
+        $("#uploadPicture").uploadFile(new File("src/test/resources/Rubiks_cube.jpg"));
 
         $("#subjectsInput").sendKeys("What is this?");
         $("[for=hobbies-checkbox-1]").click();
