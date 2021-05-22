@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class demoqa {
+public class Demoqa {
 
     @BeforeAll
     static void setup() {
@@ -37,12 +37,22 @@ public class demoqa {
 
         $("#submit").scrollTo().click();
 
-        $(".modal-body").shouldHave(text("Anton"), text("Yakushenko"), text("yakushenkoaa73@gmail.com"),
-                text("Male"), text("987456123"));
+        $(".modal-body").shouldHave(
+                text("Anton"),
+                text("Yakushenko"),
+                text("yakushenkoaa73@gmail.com"),
+                text("Male"),
+                text("987456123"));
 
-        $(".modal-body").shouldHave(text("21"), text("May"), text("2021"));
+        $(".modal-body").shouldHave(
+                text("21"),
+                text("May"),
+                text("2021"));
 
-        $(".modal-body").shouldHave(text("Sports"), text("Reading"), text("Music"));
+        $(".modal-body").shouldHave(
+                text("Sports"),
+                text("Reading"),
+                text("Music"));
 
     }
 }
