@@ -27,6 +27,13 @@ public class Demoqa {
         $("#userEmail").setValue("yakushenkoaa73@gmail.com");
         $("[for=gender-radio-1]").click();
         $("#userNumber").setValue("9874561232");
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption("September");
+        $(".react-datepicker__year-select").selectOption("2005");
+        $(".react-datepicker__day--003").click();
+
+
+
 
         $("#uploadPicture").uploadFile(new File("src/test/resources/Rubiks_cube.jpg"));
 
@@ -45,9 +52,9 @@ public class Demoqa {
                 text("987456123"));
 
         $(".modal-body").shouldHave(
-                text("21"),
-                text("May"),
-                text("2021"));
+                text("03"),
+                text("September"),
+                text("2005"));
 
         $(".modal-body").shouldHave(
                 text("Sports"),
