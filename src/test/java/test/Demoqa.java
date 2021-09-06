@@ -31,17 +31,11 @@ public class Demoqa {
         $(".react-datepicker__month-select").selectOption("September");
         $(".react-datepicker__year-select").selectOption("2005");
         $(".react-datepicker__day--003").click();
-
-
-
-
         $("#uploadPicture").uploadFile(new File("src/test/resources/Rubiks_cube.jpg"));
-
         $("#subjectsInput").sendKeys("What is this?");
         $("[for=hobbies-checkbox-1]").click();
         $("[for=hobbies-checkbox-2]").click();
         $("[for=hobbies-checkbox-3]").click();
-
         $("#submit").scrollTo().click();
 
         $(".modal-body").shouldHave(
@@ -49,14 +43,10 @@ public class Demoqa {
                 text("Yakushenko"),
                 text("yakushenkoaa73@gmail.com"),
                 text("Male"),
-                text("987456123"));
-
-        $(".modal-body").shouldHave(
+                text("987456123"),
                 text("03"),
                 text("September"),
-                text("2005"));
-
-        $(".modal-body").shouldHave(
+                text("2005"),
                 text("Sports"),
                 text("Reading"),
                 text("Music"));
