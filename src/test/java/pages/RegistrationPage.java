@@ -7,7 +7,6 @@ import pages.components.CalendarComponent;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static test.DemoqaPageobjectFaker.*;
 
 public class RegistrationPage {
 
@@ -22,6 +21,7 @@ public class RegistrationPage {
     checkboxSportInput = $("[for=hobbies-checkbox-1]"),
     submitInput = $("#submit"),
     thankInput = $("#example-modal-sizes-title-lg");
+    public static SelenideElement finalTable =  $(".modal-body");
 
     public CalendarComponent calendar = new CalendarComponent();
 
@@ -69,17 +69,5 @@ public class RegistrationPage {
 
     public void checkFormIsOpened() {
        thankInput.shouldHave(Condition.text(thankForm));
-    }
-
-    public void checkInfoFake(){
-        $(".modal-body").shouldHave(
-                text(firstName),
-                text(lastName),
-                text(userEmail),
-                text(userNumber),
-                text("03"),
-                text("September"),
-                text("2005"),
-                text("Sports"));
     }
 }

@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import com.github.javafaker.Faker;
 
+import static com.codeborne.selenide.Condition.text;
+
 public class DemoqaPageobjectFaker extends TestBase {
 
     static Faker faker = new Faker();
@@ -30,6 +32,14 @@ public class DemoqaPageobjectFaker extends TestBase {
         registrationPage.submitAndScroll();
         registrationPage.checkFormIsOpened();
 
-        registrationPage.checkInfoFake();
+        registrationPage.finalTable.shouldHave(
+                text(firstName),
+                text(lastName),
+                text(userEmail),
+                text(userNumber),
+                text("03"),
+                text("September"),
+                text("2005"),
+                text("Sports"));
     }
 }
