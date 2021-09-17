@@ -4,8 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -53,7 +51,7 @@ public class RegistrationPage {
     }
 
     public void uploadPicture() {
-       uploadInput.uploadFile(new File("src/test/resources/Rubiks_cube.jpg"));
+       uploadInput.uploadFromClasspath("Rubiks_cube.jpg");
     }
 
     public void typeSubject(String value){
