@@ -35,7 +35,7 @@ public class DemoqaPageobjectFaker extends TestBase {
         registrationPage.clickRadioButton();
         registrationPage.typePhoneNumber(userNumber);
         registrationPage.calendar.enterBirthDate("03", "September", "2005");
-       // registrationPage.uploadPicture();
+        registrationPage.uploadPicture();
         registrationPage.typeSubject(subject);
         registrationPage.chooseHobbieSport();
         registrationPage.submitAndScroll();
