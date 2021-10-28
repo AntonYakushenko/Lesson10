@@ -63,5 +63,10 @@ task properties_tests(type: Test) {
         includeTags "properties"
     }
 }
+task registration_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "RegistrationForm"
+    }
+}
 
 

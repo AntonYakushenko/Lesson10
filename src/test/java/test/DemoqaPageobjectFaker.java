@@ -2,6 +2,7 @@ package test;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import com.github.javafaker.Faker;
@@ -20,6 +21,7 @@ public class DemoqaPageobjectFaker extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
+    @Tag("RegistrationForm")
     @Feature("Forms")
     @Story("Заполнение форм")
     @Owner("Anton Yakushenko")
