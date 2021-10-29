@@ -33,7 +33,7 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = format("https://%s:%s@%s", login, password, browserURL );
+        Configuration.remote = format("https://%s:%s@%s", login, password, browserURL);
     }
 
     @AfterEach
