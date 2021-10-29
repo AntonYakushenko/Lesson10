@@ -2,13 +2,20 @@ package test;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.CredentialsConfig;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import helpers.Attach;
 
+import static java.lang.String.format;
+import static org.bouncycastle.cms.RecipientId.password;
+
 public class TestBase {
+    public static CredentialsConfig credentials =
+            ConfigFactory.create(CredentialsConfig.class);
 
     @BeforeAll
     static void setup() {
@@ -18,11 +25,15 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
 
+        String login = credentials.login();
+        String password = credentials.password();
+        String browserURL = System.getProperty("URL", credentials.browserURL());
+
 
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = format("https://%s:%s@%s", login, password, browserURL );
     }
 
     @AfterEach
