@@ -69,9 +69,4 @@ task registration_tests(type: Test) {
     }
 }
 
-/*
-java -DprojectName=PROJECT_NAME -Denv=ENVIRONMENT -DreportLink=BUILD_URL -Dcomm=Any comment here -D'config.file'=src/test/resources/notifications/teleg.json -jar allure-notifications-3.1.2.jar
-
- */
-
 
