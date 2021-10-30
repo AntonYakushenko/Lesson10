@@ -70,3 +70,7 @@ task registration_tests(type: Test) {
 }
 
 
+/*
+for local
+"allureFolder": "/var/folders/3z/v91cn1y96ysbl9fw2pfzsjnm0000gn/T/838337327180892130/allure-report/",
+ */
