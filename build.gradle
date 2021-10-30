@@ -73,4 +73,7 @@ task registration_tests(type: Test) {
 /*
 for local
 "allureFolder": "/var/folders/3z/v91cn1y96ysbl9fw2pfzsjnm0000gn/T/838337327180892130/allure-report/",
+command for start
+java "-DprojectName=PROJECT_NAME" "-Denv=ENVIRONMENT" "-DreportLink=BUILD_URL" "-Dcomm=Any comment here" "-Dconfig.file=src/test/resources/notifications/teleg.json" -jar allure-notifications-3.1.2.jar
+
  */
